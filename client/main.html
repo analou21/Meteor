@@ -3,9 +3,14 @@
 </head>
 
 <body>
-  <h1>Mini reseau social Meteor!</h1>
-  <p>Hello</p>
-  {{> loginButtons}}
+  <div class="container">
+    <h1>Mini reseau social Meteor !</h1>
+    {{> loginButtons}}
 
-  <h2>Friends</h2>
+    <h2>Friends</h2>
+    <form class="formulaire">
+      <input type="text" name="text" placeholder="Ajouter un ami" />
+    </form>
+    {{> mesAmis}}
+  </div>
 </body>
