@@ -3,9 +3,9 @@ import { Meteor } from 'meteor/meteor';
 import './formInvit.html';
 
 Template.formInvit.events({
-  'button': function(event){
+  'submit #form': function(event){
     event.preventDefault();
-    event.target.formInvit;
-    event.target.unCertainNom.valeur;
+    var nom = event.target.text.value;
+    Meteor.call('envoyerInvitation', nom);
   }
 });
